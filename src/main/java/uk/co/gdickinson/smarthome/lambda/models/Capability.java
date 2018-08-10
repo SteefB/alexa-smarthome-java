@@ -12,6 +12,7 @@ public class Capability {
     private Namespace _interface;
     private String version;
     private CapabilityProperties properties;
+    private CapabilityConfiguration configuration;
 
     public String getType() {
         return type;
@@ -45,10 +46,18 @@ public class Capability {
         this.properties = properties;
     }
 
+    public CapabilityConfiguration getConfiguration() {
+        return configuration;
+    }
+
+    public void setConfiguration(CapabilityConfiguration configuration) {
+        this.configuration = configuration;
+    }
+
     @Override
     public String toString() {
         return "Capability [type=" + type + ", _interface=" + _interface + ", version=" + version + ", properties="
-                + properties + "]";
+                + properties + " configuration=" + configuration + "]";
     }
     
     
